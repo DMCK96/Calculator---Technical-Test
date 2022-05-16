@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "k/m483z811eb6BlVrhaQgxVGBrTaG+6+KzOEFUaYUpjErxqfw/lZWxZUaOyBcQh9Wmm4X0Nu+6Eu43ahOJ0WFg==",
+  "success": true,
+  "projectFilePath": "E:\\Repositories\\Calculator - Technical Test\\GL Technical Test\\GL Technical Test\\GLTechnicalTest.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\halo6\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.13\\microsoft.netcore.app.host.win-x64.5.0.13.nupkg.sha512"
+  ],
+  "logs": []
+}
