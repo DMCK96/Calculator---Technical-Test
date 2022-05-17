@@ -1,5 +1,5 @@
 ﻿
-namespace GLTechnicalTest.Models.Interfaces
+namespace GLTechnicalTest.Calculator.Interfaces
 {
     interface ISimpleCalculator
     {

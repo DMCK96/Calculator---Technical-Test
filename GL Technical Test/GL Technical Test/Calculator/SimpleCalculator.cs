@@ -1,6 +1,6 @@
-﻿using GLTechnicalTest.Models.Interfaces;
+﻿using GLTechnicalTest.Calculator.Interfaces;
 
-namespace GLTechnicalTest.Models
+namespace GLTechnicalTest.Calculator
 {
     public class SimpleCalculator : ISimpleCalculator
     {

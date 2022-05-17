@@ -1,4 +1,4 @@
-using GLTechnicalTest.Models;
+using GLTechnicalTest.Calculator;
 using NUnit.Framework;
 
 namespace UnitTests
