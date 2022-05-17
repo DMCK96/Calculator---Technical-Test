@@ -1,18 +1,23 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using GLTechnicalTest.Data;
+using GLTechnicalTest.Models;
+using Microsoft.Extensions.Configuration;
 
 namespace GLTechnicalTest.Controllers
 {
     public class ResultController : Controller
     {
+        private readonly IConfiguration _configuration;
         private readonly CalculatorContext _context;
 
-        public ResultController(CalculatorContext context)
+        public ResultController(IConfiguration configuration)
         {
-            _context = context;
+            _configuration = configuration;
+            _context = new CalculatorContext(_configuration.GetValue<string>("ConnectionStrings:CalculatorContext"));
         }
 
         // GET: Result
@@ -21,9 +26,14 @@ namespace GLTechnicalTest.Controllers
             return View(await _context.Results.ToListAsync());
         }
 
-        private bool ResultModelExists(int id)
+        public List<ResultModel> GetResults()
         {
-            return _context.Results.Any(e => e.Id == id);
+            return ResultModelExists() ? _context.Results.ToList() : new List<ResultModel>();
+        }
+
+        private bool ResultModelExists()
+        {
+            return _context.Results.Any();
         }
     }
 }

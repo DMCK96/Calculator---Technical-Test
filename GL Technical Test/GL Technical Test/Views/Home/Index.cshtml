@@ -1,0 +1,68 @@
+﻿@model GLTechnicalTest.Models.HomeViewModel
+
+<h1>Hello! Look at this simple calculator!</h1>
+
+<h2>Addition!</h2>
+@using (Html.BeginForm("GetAdditionResult", "Calculator", FormMethod.Get))
+{
+    @Html.ValidationSummary(true)
+    <fieldset>
+        <input type="number" name="start"/> <p>+</p> <input type="number" name="amount"/>
+        <input type="submit" value="Submit"/>
+    </fieldset>
+}
+
+<br/>
+
+<h2>Subtraction!</h2>
+@using (Html.BeginForm("GetSubtractionResult", "Calculator", FormMethod.Get))
+{
+    @Html.ValidationSummary(true)
+    <fieldset>
+        <input type="number" name="start"/> <p>+</p> <input type="number" name="amount"/>
+        <input type="submit" value="Submit"/>
+    </fieldset>
+}
+
+<br/>
+
+<h2>Multiplication!</h2>
+@using (Html.BeginForm("GetMultiplicationResult", "Calculator", FormMethod.Get))
+{
+    @Html.ValidationSummary(true)
+    <fieldset>
+        <input type="number" name="start"/> <p>+</p> <input type="number" name="amount"/>
+        <input type="submit" value="Submit"/>
+    </fieldset>
+}
+
+<br/>
+
+<h2>Division!</h2>
+@using (Html.BeginForm("GetDivisionResult", "Calculator", FormMethod.Get))
+{
+    @Html.ValidationSummary(true)
+    <fieldset>
+        <input type="number" name="start"/> <p>+</p> <input type="number" name="amount"/>
+        <input type="submit" value="Submit"/>
+    </fieldset>
+}
+
+<h2>History</h2>
+
+<table>
+    <tr>
+        <th>Calculations</th>
+    </tr>
+    @if (Model.Results.Any())
+    {
+        @foreach (var result in Model.Results)
+        {
+            <tr>
+                <td>@result.Readable</td>
+            </tr>
+        }
+    }
+</table>
+
+
