@@ -39,6 +39,7 @@ namespace GLTechnicalTest.Calculator
                     };
 
                     dbContext.Results.Add(resultModel);
+                    dbContext.SaveChanges();
                 }
             }
             
@@ -65,6 +66,7 @@ namespace GLTechnicalTest.Calculator
                     };
 
                     dbContext.Results.Add(resultModel);
+                    dbContext.SaveChanges();
                 }
             }
             
@@ -90,6 +92,7 @@ namespace GLTechnicalTest.Calculator
                     };
 
                     dbContext.Results.Add(resultModel);
+                    dbContext.SaveChanges();
                 }
             }
 
@@ -115,6 +118,7 @@ namespace GLTechnicalTest.Calculator
                     };
 
                     dbContext.Results.Add(resultModel);
+                    dbContext.SaveChanges();
                 }
             }
             

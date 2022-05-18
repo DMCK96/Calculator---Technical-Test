@@ -33,6 +33,9 @@ namespace GLTechnicalTest.Controllers
 
         private bool ResultModelExists()
         {
+
+            _context.Database.EnsureCreated();
+
             return _context.Results.Any();
         }
     }
