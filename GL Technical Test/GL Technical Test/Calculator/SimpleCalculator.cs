@@ -50,7 +50,7 @@ namespace GLTechnicalTest.Calculator
 
         public float Divide(int start, int amount)
         {
-            var result = start / amount;
+            float result = (float)start / amount;
 
             if (!_mocked)
             {
@@ -76,7 +76,7 @@ namespace GLTechnicalTest.Calculator
 
         public int Multiply(int start, int amount)
         {
-            var result = start + amount;
+            var result = start * amount;
 
             if (!_mocked)
             {
@@ -102,7 +102,7 @@ namespace GLTechnicalTest.Calculator
         public int Subtract(int start, int amount)
         {
 
-            var result = start + amount;
+            var result = start - amount;
 
             if (!_mocked)
             {
